@@ -26,5 +26,7 @@ class ChangeGO(BaseEstimator, TransformerMixin):
     def transform(self, X):
         # Primeiro realizamos a cópia do dataframe 'X' de entrada
         data = X.copy()
-        # Retornamos um novo dataframe com os dados alterados para os desejados
-        return data.apply(lambda row: row['NOTA_DE'] if np.isnan(row['NOTA_GO']) else row['NOTA_GO'], axis=1)
+        # Dados alterados para os desejados:
+        data.apply(lambda row: row['NOTA_DE'] if np.isnan(row['NOTA_GO']) else row['NOTA_GO'], axis=1)
+        #Retornamos o dataframe:
+        return data
