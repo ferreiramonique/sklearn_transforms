@@ -16,7 +16,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
         return data.drop(labels=self.columns, axis='columns')
 
 class ChangeGO(BaseEstimator, TransformerMixin):
-    def __init__(self, columns):
+    def __init__(self):
         pass
 
     def fit(self, X, y=None):
